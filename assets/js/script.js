@@ -1,6 +1,7 @@
 const now = new Date(); //scritta all'inizio perchè serve in più punti diversi
 const getYear = now.getFullYear();
 const getMonth = now.getMonth();
+const appointments = [];
 
 console.log(getYear);
 console.log(getMonth);
@@ -57,6 +58,12 @@ const createDays = (daysNumber) => {
             unselectAllDays(); //deselezionare il giorno selezionato prima
             dayCellDiv.classList.add('selected');
             changeMeetingDay(i);
+            if  (appointments[i] && appointments.length > 0) {
+                showAppointments(i);
+            } else {
+                const appointmentsDiv = document.querySelector('#appointments');
+                appointmentsDiv.style.display = 'none';
+            }
         });
 
         //creiamo il giorno
