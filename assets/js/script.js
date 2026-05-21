@@ -105,3 +105,6 @@ function changeMeetingDay(i) {
     newMeetingDay.textContent = i; 
     newMeetingDay.classList.add('daySelected');
 }
+
+//Creare funzione showAppointments
+const meetingForm = document.querySelector('form');
