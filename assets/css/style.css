@@ -16,3 +16,36 @@ h1 {
     font-size: 4em;
     font-weight: 900;
 }
+
+.day {
+    display: inline-block;
+    width: 14%;
+    height: 120px;
+    /*per posizionare al centro il giorno, ho bisogno di position relative del div
+    e position absolute del giorno */
+    position: relative;
+    border: 1px solid #0D6F83;
+    border-radius: 10px;
+    cursor: pointer;
+};
+
+.day:hover, .day:hover h3 {
+    background-color: #15132e;
+}
+
+.day h3 {
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+}
+
+.currentDay {
+    background-color: #ffc0cb;
+}
+
+.sunday {
+    color: red;
+}
