@@ -53,6 +53,11 @@ const createDays = (daysNumber) => {
         const dayCellDiv = document.createElement('div');
         dayCellDiv.classList.add('day');
         //le celle devono essere cliccabili- DA FARE
+        dayCellDiv.addEventListener('click', function () {
+            unselectAllDays(); //deselezionare il giorno selezionato prima
+            dayCellDiv.classList.add('selected');
+            changeMeetingDay(i);
+        });
 
         //creiamo il giorno
         const cellValue = document.createElement('h3');
@@ -80,3 +85,16 @@ const createDays = (daysNumber) => {
 };
 
 createDays(dayInMonth());
+
+function unselectAllDays() {
+    const previousSelected = document.querySelector('.selected');
+    if (previousSelected) {
+        previousSelected.classList.remove('selected');
+    }
+};
+
+function changeMeetingDay(i) {
+    const newMeetingDay = document.querySelector('#newMeetingDay');
+    newMeetingDay.textContent = i; 
+    newMeetingDay.classList.add('daySelected');
+}

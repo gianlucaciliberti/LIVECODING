@@ -7,6 +7,15 @@
     color: #ebebeb;
 }
 
+body {
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+main {
+    margin-bottom: 30px;
+}
+
 .container {
     max-width: 992px;
     margin: 0 auto;
@@ -73,7 +82,56 @@ form {
     display: inline;
 }
 
+input {
+    width: 130px;
+    height: 36px;
+    background-color: #0c0b1d;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: #ebebeb;
+}
+
 #newMeetingDay {
     display: inline-block;
-    min-height: 24px;
+    min-height: 40px;
+}
+
+form button {
+    cursor: pointer;
+    background-color: #7a408a;
+    color: #ebebeb;
+    border: none;
+    border-radius: 5px;
+    width: 130px;
+    height: 36px;
+    padding: 10px;
+}
+
+#newMeetingName {
+    width: 200px;
+}
+
+#newMeetingTime::-webkit-calendar-picker-indicator {
+    background-color: #7a408a;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.selected {
+    border: 5px solid #7a408a;
+}
+
+#appointments ul li {
+    font-size: 1.2em;
+}
+
+.daySelected {
+    font-size: 28px;
+    font-weight: 700;
+    background-color: #0c0b1d;
+    border-radius: 5px;
+    height: 37px;
+    width: 37px;
+    padding-left: 5px;
 }
