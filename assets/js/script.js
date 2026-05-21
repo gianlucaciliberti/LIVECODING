@@ -56,23 +56,23 @@ const createDays = (daysNumber) => {
 
         //creiamo il giorno
         const cellValue = document.createElement('h3');
-    
+
 
         //evidenzimo giorno corrente
-        if (i===now.getDate()) {
+        if (i === now.getDate()) {
             dayCellDiv.classList.add('currentDay');
         }
 
         //scriviamo domeniche in rosso
         let thisDay = new Date(getYear, getMonth, i);
-        if (thisDay.getDay()===0) {
+        if (thisDay.getDay() === 0) {
             cellValue.classList.add('sunday');
         }
 
         //scriviamo nome del giorno
         let dayNumber = thisDay.getDay();
         let dayName = dayNames[dayNumber];
-        cellValue.textContent= `${dayName} ${i}`;
+        cellValue.textContent = `${dayName} ${i}`;
         dayCellDiv.appendChild(cellValue);
         calendarDiv.appendChild(dayCellDiv);
     }

@@ -20,16 +20,17 @@ h1 {
 .day {
     display: inline-block;
     width: 14%;
-    height: 120px;
+    height: 130px;
     /*per posizionare al centro il giorno, ho bisogno di position relative del div
     e position absolute del giorno */
     position: relative;
     border: 1px solid #0D6F83;
     border-radius: 10px;
     cursor: pointer;
-};
+}
 
-.day:hover, .day:hover h3 {
+.day:hover,
+.day:hover h3 {
     background-color: #15132e;
 }
 
@@ -42,10 +43,37 @@ h1 {
     right: 0;
 }
 
-.currentDay {
+.currentDay,
+.currentDay:hover {
     background-color: #ffc0cb;
 }
 
+
 .sunday {
     color: red;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h4 {
+    margin-bottom: 30px;
+}
+
+#addMeeting div {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 50px;
+}
+
+form {
+    display: inline;
+}
+
+#newMeetingDay {
+    display: inline-block;
+    min-height: 24px;
 }
